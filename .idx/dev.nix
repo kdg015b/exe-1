@@ -7,6 +7,7 @@
   packages = [
     pkgs.nodejs_22
     pkgs.python3
+    pkgs.python311Packages.requests
   ];
   # Sets environment variables in the workspace
   env = {};
