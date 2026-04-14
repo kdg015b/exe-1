@@ -28,5 +28,11 @@ def get_korean_stocks():
         data = json.load(f)
     return jsonify(data)
 
+@app.route('/api/news')
+def get_news():
+    with open('news.json', 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    return jsonify(data)
+
 if __name__ == '__main__':
     app.run(debug=True)
