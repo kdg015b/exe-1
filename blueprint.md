@@ -4,6 +4,8 @@
 
 이 프로젝트는 김도균의 개인 홈페이지를 구축하는 것을 목표로 합니다. 최신 웹 기술과 현대적인 디자인을 활용하여 김도균의 경력, 프로젝트, 관심사 등을 소개하는 매력적인 공간을 만듭니다.
 
+**GitHub Repository:** [https://github.com/kdg015b/exe-1.git](https://github.com/kdg015b/exe-1.git)
+
 ## 디자인 및 기능
 
 *   **디자인:**
