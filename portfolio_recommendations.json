@@ -1,0 +1,33 @@
+
+{
+  "short_term_7_days_momentum": {
+    "title": "단기 (7일): 모멘텀 중심",
+    "stocks": [
+      { "rank": 1, "ticker": "010950", "name": "S-Oil" },
+      { "rank": 2, "ticker": "012450", "name": "한화에어로스페이스" },
+      { "rank": 3, "ticker": "035420", "name": "NAVER" },
+      { "rank": 4, "ticker": "105560", "name": "KB금융" },
+      { "rank": 5, "ticker": "097950", "name": "CJ제일제당" }
+    ]
+  },
+  "mid_term_30_days_hybrid": {
+    "title": "중기 (30일): 혼합",
+    "stocks": [
+      { "rank": 1, "ticker": "035420", "name": "NAVER" },
+      { "rank": 2, "ticker": "012450", "name": "한화에어로스페이스" },
+      { "rank": 3, "ticker": "010950", "name": "S-Oil" },
+      { "rank": 4, "ticker": "097950", "name": "CJ제일제당" },
+      { "rank": 5, "ticker": "105560", "name": "KB금융" }
+    ]
+  },
+  "long_term_180_days_fundamental": {
+    "title": "장기 (180일): 펀더멘탈",
+    "stocks": [
+      { "rank": 1, "ticker": "105560", "name": "KB금융" },
+      { "rank": 2, "ticker": "097950", "name": "CJ제일제당" },
+      { "rank": 3, "ticker": "035420", "name": "NAVER" },
+      { "rank": 4, "ticker": "012450", "name": "한화에어로스페이스" },
+      { "rank": 5, "ticker": "010950", "name": "S-Oil" }
+    ]
+  }
+}
