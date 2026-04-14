@@ -16,18 +16,20 @@ def main():
     news_api_key = "7f0f28591a554080ba2d4f7f96b2b729"
     news_data = fetch_news(api_key=news_api_key)
 
+    # Handle case where no news is found
     if not news_data or 'articles' not in news_data or not news_data['articles']:
         print("No news data found.")
-        # Create an empty portfolio file
         with open('portfolio.json', 'w') as f:
+            json.dump([], f, indent=4)
+        with open('news.json', 'w') as f:
             json.dump([], f, indent=4)
         return
 
     # 2. Insight Analysis
     total_sentiment_score = 0
     for article in news_data['articles']:
-        description = article['description'] or ""
-        title = article['title'] or ""
+        description = article.get('description', '') or ""
+        title = article.get('title', '') or ""
         total_sentiment_score += analyze_sentiment(title + " " + description)
     
     average_sentiment = total_sentiment_score / len(news_data['articles']) if news_data['articles'] else 0
@@ -46,11 +48,14 @@ def main():
     # 4. Portfolio Generation
     portfolio = build_portfolio(scores)
 
-    # 5. Save portfolio to JSON file
+    # 5. Save results to JSON files
     with open('portfolio.json', 'w') as f:
         json.dump(portfolio, f, indent=4)
 
-    print("Portfolio data has been successfully saved to portfolio.json")
+    with open('news.json', 'w') as f:
+        json.dump(news_data['articles'], f, indent=4)
+
+    print("Portfolio data and news articles have been successfully saved.")
 
 if __name__ == "__main__":
     main()
